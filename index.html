@@ -12,6 +12,7 @@
       height: 100%;
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
+      background-color: black;
     }
 
     .page {
@@ -28,6 +29,12 @@
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
       padding: 20px;
       box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .page.visible {
+      opacity: 1;
     }
 
     .collage {
@@ -88,10 +95,21 @@
       100% { transform: translate(-30px, 20px); }
     }
 
-    .bubble1 { top: 5%; left: 5%; }
-    .bubble2 { top: 5%; right: 5%; }
-    .bubble3 { bottom: 5%; left: 5%; }
-    .bubble4 { bottom: 5%; right: 5%; }
+    /* Custom bubble positions per page */
+    .bubble-a1 { top: 10%; left: 5%; }
+    .bubble-a2 { top: 20%; right: 10%; }
+    .bubble-a3 { bottom: 15%; left: 15%; }
+    .bubble-a4 { bottom: 8%; right: 8%; }
+
+    .bubble-b1 { top: 12%; left: 8%; }
+    .bubble-b2 { top: 25%; right: 12%; }
+    .bubble-b3 { bottom: 18%; left: 10%; }
+    .bubble-b4 { bottom: 10%; right: 15%; }
+
+    .bubble-c1 { top: 18%; left: 6%; }
+    .bubble-c2 { top: 22%; right: 5%; }
+    .bubble-c3 { bottom: 20%; left: 12%; }
+    .bubble-c4 { bottom: 12%; right: 10%; }
 
     .song-button {
       font-size: 2em;
@@ -121,7 +139,7 @@
 </head>
 <body>
 
-<!-- PAGE TEMPLATE -->
+<!-- PAGE 1 -->
 <div class="page" style="background-color: #c0392b;">
   <div class="collage">
     <img src="image1.jpg"><img src="image2.jpg"><img src="image3.jpg">
@@ -135,12 +153,13 @@
     <button class="song-button" onclick="togglePlay(0)">🌻</button>
     <div class="song-title">Can't Help Falling in Love</div>
   </div>
-  <div class="bubble bubble1" onclick="changeJoke(this, 1, 0)">You're the glitch in my matrix ❤️</div>
-  <div class="bubble bubble2" onclick="changeJoke(this, 1, 1)">You're cuter than all my favorite snacks 🍪</div>
-  <div class="bubble bubble3" onclick="changeJoke(this, 1, 2)">You're my GPS, I feel lost without you 📶</div>
-  <div class="bubble bubble4" onclick="changeJoke(this, 1, 0)">You’re the reason I smile at my phone like an idiot 📱</div>
+  <div class="bubble bubble-a1" onclick="changeJoke(this, 1, 0)">You're the glitch in my matrix ❤️</div>
+  <div class="bubble bubble-a2" onclick="changeJoke(this, 1, 1)">You're cuter than all my favorite snacks 🍪</div>
+  <div class="bubble bubble-a3" onclick="changeJoke(this, 1, 2)">You're my GPS, I feel lost without you 📶</div>
+  <div class="bubble bubble-a4" onclick="changeJoke(this, 1, 0)">You’re the reason I smile at my phone like an idiot 📱</div>
 </div>
 
+<!-- PAGE 2 -->
 <div class="page" style="background-color: #3498db;">
   <div class="collage">
     <img src="image7.jpg"><img src="image8.jpg"><img src="image9.jpg">
@@ -154,12 +173,13 @@
     <button class="song-button" onclick="togglePlay(1)">🌻</button>
     <div class="song-title">Bungalow</div>
   </div>
-  <div class="bubble bubble1" onclick="changeJoke(this, 2, 0)">We fight, we laugh, we snack — repeat 🔁</div>
-  <div class="bubble bubble2" onclick="changeJoke(this, 2, 1)">You’re my daily dose of chaos 💥</div>
-  <div class="bubble bubble3" onclick="changeJoke(this, 2, 2)">Still arguing about what to eat 🍕</div>
-  <div class="bubble bubble4" onclick="changeJoke(this, 2, 0)">I love you even when you steal my fries 🍟</div>
+  <div class="bubble bubble-b1" onclick="changeJoke(this, 2, 0)">We fight, we laugh, we snack — repeat 🔁</div>
+  <div class="bubble bubble-b2" onclick="changeJoke(this, 2, 1)">You’re my daily dose of chaos 💥</div>
+  <div class="bubble bubble-b3" onclick="changeJoke(this, 2, 2)">Still arguing about what to eat 🍕</div>
+  <div class="bubble bubble-b4" onclick="changeJoke(this, 2, 0)">I love you even when you steal my fries 🍟</div>
 </div>
 
+<!-- PAGE 3 -->
 <div class="page" style="background-color: #f1c40f;">
   <div class="collage">
     <img src="image13.jpg"><img src="image14.jpg"><img src="image15.jpg">
@@ -173,12 +193,13 @@
     <button class="song-button" onclick="togglePlay(2)">🌻</button>
     <div class="song-title">Belong Together</div>
   </div>
-  <div class="bubble bubble1" onclick="changeJoke(this, 3, 0)">We’re gonna be that old couple dancing in the street 💃🕺</div>
-  <div class="bubble bubble2" onclick="changeJoke(this, 3, 1)">The future? It's basically just us being cute forever 🐣</div>
-  <div class="bubble bubble3" onclick="changeJoke(this, 3, 2)">Spoiler: We still won’t agree on where to eat 🍜</div>
-  <div class="bubble bubble4" onclick="changeJoke(this, 3, 0)">Still not agreeing on pizza toppings in 50 years 🍕</div>
+  <div class="bubble bubble-c1" onclick="changeJoke(this, 3, 0)">We’re gonna be that old couple dancing in the street 💃🕺</div>
+  <div class="bubble bubble-c2" onclick="changeJoke(this, 3, 1)">The future? It's basically just us being cute forever 🐣</div>
+  <div class="bubble bubble-c3" onclick="changeJoke(this, 3, 2)">Spoiler: We still won’t agree on where to eat 🍜</div>
+  <div class="bubble bubble-c4" onclick="changeJoke(this, 3, 0)">Still not agreeing on pizza toppings in 50 years 🍕</div>
 </div>
 
+<!-- Audio -->
 <audio id="audio1" src="song1.mp3"></audio>
 <audio id="audio2" src="song2.mp3"></audio>
 <audio id="audio3" src="song3.mp3"></audio>
@@ -231,6 +252,21 @@ function togglePlay(index) {
     }
   });
 }
+
+// Fade in on scroll
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+document.querySelectorAll(".page").forEach(page => observer.observe(page));
 </script>
+
 </body>
 </html>
