@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Love Story</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+    }
+    .page {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      padding: 20px;
+    }
+    .collage {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      z-index: 0;
+    }
+    .collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+    .content {
+      z-index: 1;
+      text-align: center;
+    }
+    .message {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .song {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .bubbles {
+      position: absolute;
+      z-index: 2;
+    }
+    .bubble {
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 25px;
+      position: absolute;
+      font-size: 0.9em;
+      max-width: 180px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.6s ease;
+      animation: float 14s ease-in-out infinite;
+      opacity: 0.95;
+    }
+    @keyframes float {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(10px, -10px) rotate(2deg); }
+      50% { transform: translate(-10px, 10px) rotate(-2deg); }
+      75% { transform: translate(10px, 10px) rotate(2deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <section class="page" style="background-color: rgba(200,0,0,0.3);">
+    <div class="collage">
+      <img src="image1.jpg" />
+      <img src="image2.jpg" />
+      <img src="image3.jpg" />
+      <img src="image4.jpg" />
+      <img src="image5.jpg" />
+      <img src="image6.jpg" />
+    </div>
+    <div class="bubbles">
+      <div id="bubble1" class="bubble">You're the glitch in my matrix ❤️</div>
+      <div id="bubble2" class="bubble">You're cuter than all my favorite snacks 🍪</div>
+      <div id="bubble3" class="bubble">You're my Wi-Fi — I feel lost without you 📶</div>
+      <div id="bubble4" class="bubble">Love at first meme 😍</div>
+    </div>
+    <div class="content">
+      <div class="song">"Can't Help Falling in Love" – Haley Reinhart</div>
+      <div class="message">From the moment we met, something felt different…</div>
+    </div>
+  </section>
+
+  <!-- Page 2 -->
+  <section class="page" style="background-color: rgba(173,216,230,0.3);">
+    <div class="collage">
+      <img src="image7.jpg" />
+      <img src="image8.jpg" />
+      <img src="image9.jpg" />
+      <img src="image10.jpg" />
+      <img src="image11.jpg" />
+      <img src="image12.jpg" />
+    </div>
+    <div class="bubbles">
+      <div id="bubble5" class="bubble">We fight, we laugh, we snack — repeat 🔁</div>
+      <div id="bubble6" class="bubble">You’re my daily dose of chaos 💥</div>
+      <div id="bubble7" class="bubble">Still arguing about what to eat 🍕</div>
+      <div id="bubble8" class="bubble">Our love language? Inside jokes 😆</div>
+    </div>
+    <div class="content">
+      <div class="song">"Bungalow" – Al Bairre</div>
+      <div class="message">Right now, we’re a beautiful mix of chaos and comfort…</div>
+    </div>
+  </section>
+
+  <!-- Page 3 -->
+  <section class="page" style="background-color: rgba(255,255,150,0.3);">
+    <div class="collage">
+      <img src="image13.jpg" />
+      <img src="image14.jpg" />
+      <img src="image15.jpg" />
+      <img src="image16.jpg" />
+      <img src="image17.jpg" />
+      <img src="image18.jpg" />
+    </div>
+    <div class="bubbles">
+      <div id="bubble9" class="bubble">We’re gonna be that old couple doing TikToks 💃🕺</div>
+      <div id="bubble10" class="bubble">The future? It's basically just us being cute forever 🐣</div>
+      <div id="bubble11" class="bubble">Spoiler: We still won’t agree on where to eat 🍜</div>
+      <div id="bubble12" class="bubble">Our future playlist: Just laughter and cuddles 🎶</div>
+    </div>
+    <div class="content">
+      <div class="song">"Belong Together" – Mark Ambor</div>
+      <div class="message">When I look ahead, I see you…</div>
+    </div>
+  </section>
+
+  <script>
+    const jokeData = {
+      bubble1: {
+        jokes: ["You're the glitch in my matrix ❤️", "You're my favorite notification 🔔", "You make my heart do backflips 💓"],
+        colors: ["#ffffff", "#cdefff", "#fff9c4"]
+      },
+      bubble2: {
+        jokes: ["You're cuter than all my favorite snacks 🍪", "You're my snack AND my meal 😋", "You + me = yum 😍"],
+        colors: ["#fff9c4", "#ffffff", "#cdefff"]
+      },
+      bubble3: {
+        jokes: ["You're my Wi-Fi — I feel lost without you 📶", "Without you, I lag emotionally 😭", "We’re synced like Bluetooth 💙"],
+        colors: ["#cdefff", "#fff9c4", "#ffffff"]
+      },
+      bubble4: {
+        jokes: ["Love at first meme 😍", "You're the LOL in my life 😂", "You're the share button on my heart ❤️"],
+        colors: ["#ffffff", "#cdefff", "#fff9c4"]
+      },
+      bubble5: {
+        jokes: ["We fight, we laugh, we snack — repeat 🔁", "Still arguing about what to eat 🍕", "You're my daily dose of chaos 💥"],
+        colors: ["#ffffff", "#fff9c4", "#cdefff"]
+      },
+      bubble6: {
+        jokes: ["Our love language? Inside jokes 😆", "We’re experts in Netflix diplomacy 📺", "Even silence with you is funny 🤭"],
+        colors: ["#cdefff", "#fff9c4", "#ffffff"]
+      },
+      bubble7: {
+        jokes: ["You're the remote control to my comfort 🎮", "I'd share my fries with you 🍟", "You're my emotional support snack 🍩"],
+        colors: ["#fff9c4", "#cdefff", "#ffffff"]
+      },
+      bubble8: {
+        jokes: ["Still can’t believe we found each other in this chaos 💞", "We’re the human version of popcorn and movies 🍿", "Our chaos makes sense together 🎉"],
+        colors: ["#ffffff", "#cdefff", "#fff9c4"]
+      },
+      bubble9: {
+        jokes: ["We’re gonna be that old couple doing TikToks 💃🕺", "The future? Just us being cute forever 🐣", "Still won’t agree on where to eat 🍜"],
+        colors: ["#cdefff", "#fff9c4", "#ffffff"]
+      },
+      bubble10: {
+        jokes: ["Our future playlist: Laughter and cuddles 🎶", "You make 'forever' sound chill 🌈", "Just vibing through life with you 🚀"],
+        colors: ["#fff9c4", "#ffffff", "#cdefff"]
+      },
+      bubble11: {
+        jokes: ["You're the Google to my answers 🔍", "You're my emotional USB stick 💾", "You complete my captcha 💘"],
+        colors: ["#cdefff", "#ffffff", "#fff9c4"]
+      },
+      bubble12: {
+        jokes: ["You're my favorite future memory 📸", "We’ve got matching dreams 😴", "You’re the bookmark in my story 📖"],
+        colors: ["#ffffff", "#cdefff", "#fff9c4"]
+      },
+    };
+
+    function setupInteractiveBubbles() {
+      Object.keys(jokeData).forEach(id => {
+        const bubble = document.getElementById(id);
+        if (!bubble) return;
+
+        let jokeIndex = 0;
+        let colorIndex = 0;
+
+        bubble.addEventListener('click', () => {
+          jokeIndex = (jokeIndex + 1) % jokeData[id].jokes.length;
+          colorIndex = (colorIndex + 1) % jokeData[id].colors.length;
+          bubble.textContent = jokeData[id].jokes[jokeIndex];
+          bubble.style.backgroundColor = jokeData[id].colors[colorIndex];
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupInteractiveBubbles);
+  </script>
+</body>
+</html>
