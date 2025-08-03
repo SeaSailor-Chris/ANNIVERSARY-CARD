@@ -222,14 +222,12 @@ const jokes = {
     ["Spoiler: We still won’t agree on where to eat 🍜", "Our future playlist: Just laughter and cuddles 🎶", "Growing old but staying goofy together 🎈"]
   ]
 };
-
-const colors = ["#ffffff", "#add8e6", "#fffacd"];
+3
 function changeJoke(el, page, index) {
   const jokeList = jokes[page][index];
   const current = el.innerText;
   let next = jokeList[(jokeList.indexOf(current) + 1) % jokeList.length];
   el.innerText = next;
-  el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 }
 
 const audios = [
