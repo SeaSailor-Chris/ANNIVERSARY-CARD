@@ -91,8 +91,8 @@
 
     @keyframes float {
       0% { transform: translate(0, 0); }
-      50% { transform: translate(30px, -40px); }
-      100% { transform: translate(-30px, 20px); }
+      50% { transform: translate(15px, -40px); }
+      100% { transform: translate(-15px, 20px); }
     }
 
     /* Custom bubble positions per page */
@@ -156,7 +156,7 @@
   <div class="bubble bubble-a1" onclick="changeJoke(this, 1, 0)"> </div>
   <div class="bubble bubble-a2" onclick="changeJoke(this, 1, 1)"> </div>
   <div class="bubble bubble-a3" onclick="changeJoke(this, 1, 2)"> </div>
-  <div class="bubble bubble-a4" onclick="changeJoke(this, 1, 0)"> </div>
+  <div class="bubble bubble-a4" onclick="changeJoke(this, 1, 3)"> </div>
 </div>
 
 <!-- PAGE 2 -->
@@ -176,7 +176,7 @@
   <div class="bubble bubble-b1" onclick="changeJoke(this, 2, 0)"> </div>
   <div class="bubble bubble-b2" onclick="changeJoke(this, 2, 1)"> </div>
   <div class="bubble bubble-b3" onclick="changeJoke(this, 2, 2)"> </div>
-  <div class="bubble bubble-b4" onclick="changeJoke(this, 2, 0)"> </div>
+  <div class="bubble bubble-b4" onclick="changeJoke(this, 2, 3)"> </div>
 </div>
 
 <!-- PAGE 3 -->
@@ -196,7 +196,7 @@
   <div class="bubble bubble-c1" onclick="changeJoke(this, 3, 0)"> </div>
   <div class="bubble bubble-c2" onclick="changeJoke(this, 3, 1)"> </div>
   <div class="bubble bubble-c3" onclick="changeJoke(this, 3, 2)"> </div>
-  <div class="bubble bubble-c4" onclick="changeJoke(this, 3, 0)"> </div>
+  <div class="bubble bubble-c4" onclick="changeJoke(this, 3, 3)"> </div>
 </div>
 
 <!-- Audio -->
@@ -207,19 +207,19 @@
 <script>
 const jokes = {
   1: [
-    ["You're the glitch in my matrix ❤️", "You're my favorite notification 💬", "You’re the reason I smile at my phone like an idiot 📱"],
-    ["You're cuter than all my favorite snacks 🍪", "If hugs were currency, you’d be a millionaire 🤗", "You + Me = Infinite snacks and laughs 🍿"],
-    ["You're my GPS, I feel lost without you 📶", "Love at first meme 😍", "You're my favorite weirdo 😜"]
+    ["You're the glitch in my matrix ❤️", "You're my favorite notification 💬", "You’re the reason I smile at my phone like an idiot 📱", " "],
+    ["You're cuter than all my favorite snacks 🍪", "If hugs were currency, you’d be a millionaire 🤗", "You + Me = Infinite snacks and laughs 🍿", " "],
+    ["You're my GPS, I feel lost without you 📶", "Love at first meme 😍", "You're my favorite weirdo 😜", " "],
   ],
   2: [
-    ["We sleep, we laugh, we snack — repeat 🔁", "I love you even when you steal my fries 🍟", "You and me = functional chaos 💥"],
-    ["You’re my daily dose of cutness 💥", "Every day with you is an adventure… sometimes a fantasy 🧭", "You're the peanut butter to my jelly brain 🥜"],
-    ["Still deciding about what to eat 🍕", "Our love language? Inside jokes 😆", "Netflix, snacks, and cuddles 🛋️"]
+    ["We sleep, we laugh, we snack — repeat 🔁", "I love you even when you steal my fries 🍟", "You and me = functional chaos 💥", " "],
+    ["You’re my daily dose of cutness 💥", "Every day with you is an adventure… sometimes a fantasy 🧭", "You're the peanut butter to my jelly brain 🥜", " "],
+    ["Still deciding about what to eat 🍕", "Our love language? Inside jokes 😆", "Netflix, snacks, and cuddles 🛋️", " "],
   ],
   3: [
-    ["We’re gonna be that old couple dancing in the street 💃🕺", "Still not agreeing on pizza toppings in 50 years 🍕", "You're my future cuddle buddy forever 🧸"],
-    ["The future? It's basically just us being cute forever 🐣", "You make even Mondays feel special 💛", "One day, we’ll tell our love story to our plants 🌿"],
-    ["Spoiler: We still won’t agree on where to eat 🍜", "Our future playlist: Just laughter and cuddles 🎶", "Growing old but staying goofy together 🎈"]
+    ["We’re gonna be that old couple dancing in the street 💃🕺", "Still not agreeing on pizza toppings in 50 years 🍕", "You're my future cuddle buddy forever 🧸", " "],
+    ["The future? It's basically just us being cute forever 🐣", "You make even Mondays feel special 💛", "One day, we’ll tell our love story to our plants 🌿", " "],
+    ["Spoiler: We still won’t agree on where to eat 🍜", "Our future playlist: Just laughter and cuddles 🎶", "Growing old but staying goofy together 🎈", " "],
   ]
 };
 3
